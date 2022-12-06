@@ -1,31 +1,58 @@
 // Write your solution in this file!
-const employees = {Sam}
-function updateEmployeeWithKeyAndValue(employee, key, value){
-    for(const key in employee){
-        delete employee[key];
-    }
-    employee.name = 'Sam';
-    streetAddress = '11 Broadway'
-
-    return Object.assign({}, employee, { [key]: value });
+const employee = {
+    name: "sam",
+    streetAddress: "11 Broadway"
+};
+function updateEmployeeWithKeyAndValue(employee,key,value){
+    const updatedEmployee = {...employee};
+    updatedEmployee[key] = value;
+    return updatedEmployee;
 }
-
-function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
+function destructivelyUpdateEmployeeWithKeyAndValue(employee,key,value){
     employee[key] = value;
-    employee.name= 'Sam';
-    streetAddress = '12 Broadway'
     return employee;
 }
-function deleteFromEmployeeByKey(employee, key){
-    const NEW_Employee = Object.assign({}, employee);
-    delete NEW_Employee[key];
-    return NEW_Employee;
+function deleteFromEmployeeByKey(employee,key){
+    const updatedEmployee = {...employee};
+    delete updatedEmployee[key];
+    return updatedEmployee;
 }
-function destructivelyDeleteFromEmployeeByKey(employee, key){
-    Object.assign({}, employee);
+function destructivelyDeleteFromEmployeeByKey(employee,key){
     delete employee[key];
     return employee;
 }
+
+
+
+//const employee = {}
+//let streetAddress = {}
+
+//function updateEmployeeWithKeyAndValue(employee, key, value){
+ //   for(const key in employee){
+ //       delete employee[key];
+  //  }
+  //  employee.name = 'Sam';
+  //  streetAddress = '11 Broadway'
+
+  //  return Object.assign({}, employee, { [key]: value });
+//}
+
+//function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
+   // employee[key] = value;
+   // employee.name= 'Sam';
+    //streetAddress = '12 Broadway'
+    //return employee;
+//}
+//function deleteFromEmployeeByKey(employee, key){
+  //  const NEW_Employee = Object.assign({}, employee);
+    //delete NEW_Employee[key];
+   // return NEW_Employee;
+//}
+//function destructivelyDeleteFromEmployeeByKey(employee, key){
+ //   Object.assign({}, employee);
+  //  delete employee[key];
+  //  return employee;
+//}
 
 
 
